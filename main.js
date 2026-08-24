@@ -55,10 +55,10 @@ document.getElementById("btn-fetch").addEventListener("click", async () => {
     out.textContent = "Loading...";
 
     try {
-        const response = await fetch("<https://icanhazdadjoke.com/>", {
+        const response = await fetch("https://icanhazdadjoke.com/", {
         headers: { Accept: "application/json" },
     });
-    
+
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         out.textContent = data.joke;
